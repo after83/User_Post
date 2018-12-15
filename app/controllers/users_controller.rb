@@ -19,6 +19,10 @@ class UsersController < ApplicationController
   def update
   end
 
+  def check
+
+  end
+
   def destroy
     @user.destroy
     redirect_to root_path

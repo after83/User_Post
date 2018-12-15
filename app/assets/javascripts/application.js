@@ -14,3 +14,8 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+ var info = document.querySelector('.info')
+var declanche = document.querySelector('input')
+declanche.addEventListener("click", function () {
+    info.className += "alert"
+})
