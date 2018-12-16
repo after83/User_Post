@@ -1,9 +1,12 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<h1>Bienvenue dans mon blog</h1>
+<p>J'ai realiser a l'aide du framwork Ruby on rails afin d'avoir un projet concret a mettre dans mon portfolio </p>
+<p>Voila donc pourquoi le design n'est pas très aboutie j'ai utiliser le framwork bootstrap mais le but est le fonctionement du projet</p>
   <% if user_signed_in? %>
-    <%= button_to 'Exit', destroy_user_session_path, method: :delete %>
-    <a href="/posts">Creer un post</a>
+    <%= button_to 'Deconnexion', destroy_user_session_path, method: :delete %>
+    <a href="/posts" class="btn btn-primary">Voir les post &rarr;</a>
+    <a href="/posts/new" class="btn btn-secondary">Cree un post &rarr;</a><br>
+  <%else %>
+    <a href="/posts" class="btn btn-primary">Voir les post &rarr;</a><br>
+    <a href="/users/sign_in">Se connecter</a> | <a href="/users/sign_up">s'identifier</a>
+  <%end %>
 
-
-  <% end %>
-<a href="/users/sign_in">Se connecter</a> | <a href="/users/sign_up">s'identifier</a>
