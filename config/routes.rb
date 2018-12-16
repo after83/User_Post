@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get 'users/create'
   get 'users/update'
   get 'users/destroy'
-  devise_for :users
+  devise_for :users, :controllers => { :registrations => 'users/registrations' }
 
 
   resources :posts

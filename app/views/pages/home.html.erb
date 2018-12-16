@@ -2,6 +2,8 @@
 <p>Find me in app/views/pages/home.html.erb</p>
   <% if user_signed_in? %>
     <%= button_to 'Exit', destroy_user_session_path, method: :delete %>
-  <a href="/posts">Creer un post</a>
+    <a href="/posts">Creer un post</a>
+
+
   <% end %>
 <a href="/users/sign_in">Se connecter</a> | <a href="/users/sign_up">s'identifier</a>
